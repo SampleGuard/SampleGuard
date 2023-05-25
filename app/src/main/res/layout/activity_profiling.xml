@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/blue"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.example.sampleguard.ProfilingActivity">
+    <EditText
+        android:id="@+id/edit_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input" />
+    <EditText
+        android:id="@+id/edit_timing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="How long will each test run (s)?" />
+
+    <CheckBox android:id="@+id/checkbox_cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run in background"
+        android:onClick="onCheckboxClicked"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToMainScreen"
+        android:backgroundTint="#FFFFFF"
+        android:text="Back" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startProfilingBtn"
+        android:backgroundTint="#FFFFFF"
+        android:text="Start Profiling" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1Hz" />
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/accelGraph_1Hz" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/magGraph_1Hz" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/gyroGraph_1Hz" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10Hz" />
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/accelGraph_10Hz" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/magGraph_10Hz" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/gyroGraph_10Hz" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100Hz" />
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/accelGraph_100Hz" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/magGraph_100Hz" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/gyroGraph_100Hz" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SENSOR_DELAY_NORMAL" />
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/accelGraph_normal" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/magGraph_normal" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/gyroGraph_normal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SENSOR_DELAY_FASTEST" />
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/accelGraph_fastest" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/magGraph_fastest" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/gyroGraph_fastest" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SENSOR_DELAY_GAME" />
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/accelGraph_game" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/magGraph_game" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/gyroGraph_game" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SENSOR_DELAY_UI" />
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/accelGraph_ui" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/magGraph_ui" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="200dip"
+        android:id="@+id/gyroGraph_ui" />
+
+
+</LinearLayout>
+</ScrollView>
